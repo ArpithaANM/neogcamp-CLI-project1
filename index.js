@@ -3,6 +3,7 @@ var readlineSync = require('readline-sync');
 var userName = readlineSync.question("May I know your know? ");
 
 console.log("Hello " + userName + ", Welcome to the quiz!!!")
+console.log("\n");
 
 //High Scores
 var highScores = [{user:"Chintu",hscore:4},
@@ -40,10 +41,12 @@ var questionAnswer = [{
 for (var i=0; i<questionAnswer.length; i++){
   var queue = questionAnswer[i];
   play(queue.question,queue.answer);
+  console.log("\n");
 }
 console.log("**************************************************************");
 console.log("Your score is " + score);
 console.log("***************************************************************");
+console.log("\n");
 
 //checking if the user has beaten top 3 scores
 console.log("Top 3 scores are: ");
